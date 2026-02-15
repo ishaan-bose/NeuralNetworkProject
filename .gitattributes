@@ -1,0 +1,2 @@
+TrainingSet/* filter=lfs diff=lfs merge=lfs -text
+CopyOfOriginalDataset/* filter=lfs diff=lfs merge=lfs -text
