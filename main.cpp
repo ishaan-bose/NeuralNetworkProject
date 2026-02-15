@@ -256,7 +256,7 @@ int main()
     const double LearningRate = 0.005;
     const unsigned int MiniBatchSize = 1;
     double Cost = 0.0;
-    double GroundTruth = 0.0;
+    double GroundTruth = 0.69'420'67;
     const double updateCoefficient = LearningRate/MiniBatchSize;
 
 
@@ -265,6 +265,7 @@ int main()
 
 
 
+    /*
     std::fill(InputActivation, InputActivation + 740, 1.0);
 
     matrix_vector_multiply_blas(W740, InputActivation, Actvtn512, 512, 740);
@@ -295,9 +296,7 @@ int main()
     ActvtnOutput = std::tanh(B16 + avx512_dot_product(W16, Actvtn16, 16));
     Sech2_Output = 1.0 - ActvtnOutput*ActvtnOutput;
 
-    std::cout << "Output of inferencing All 1's vector: " << ActvtnOutput << "\n\n";
-
-    derOutput = (GroundTruth - ActvtnOutput)*(-1.0)*Sech2_Output;
+    derOutput = (ActvtnOutput - GroundTruth)*Sech2_Output;
 
     avx512_mul_scalar(W16, derOutput, IntermDer16, 16);
     avx512_hadamard_product(IntermDer16, Sech2_16, der16, 16);
@@ -313,6 +312,7 @@ int main()
 
     vector_matrix_multiply(der256, W512, IntermDer512, 256, 512);
     avx512_hadamard_product(IntermDer512, Sech2_512, der512, 512);
+    
     
 
 
@@ -348,6 +348,8 @@ int main()
     Actvtn128, Actvtn64, Actvtn16,
     ActvtnOutput);
 
+
+    */
 
 
     /*
